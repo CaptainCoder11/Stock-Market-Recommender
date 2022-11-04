@@ -1,24 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import HeaderComponent from './component/header/header.component';
+import { useState } from 'react';
+import StockInfoComponent from './component/stockinfo/stock.info.component';
 
 function App() {
+  const [symbol,setsymbol] = useState<String>()
+  const changeValue = (value:String) => {
+    setsymbol(value);
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <HeaderComponent changeValue={changeValue}></HeaderComponent>
+      <StockInfoComponent symbol={symbol}></StockInfoComponent>
     </div>
   );
 }

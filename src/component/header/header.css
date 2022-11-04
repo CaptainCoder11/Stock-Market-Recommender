@@ -1,0 +1,30 @@
+header{
+display: flex;
+flex-direction: row;
+background-color: gold;
+padding: 1rem;
+position: fixed;
+width: 98vw;
+}
+
+#symbol{
+font-weight: bold;
+font-size: large;
+margin-right: 1rem;
+}
+
+select{
+background-color: orangered;
+border-radius: 3rem;
+}
+
+#window{
+margin-left: auto;
+}
+
+#to{
+font-weight: 800;
+color: whitesmoke;
+margin-left: 1rem;
+margin-right: 1rem;
+}
